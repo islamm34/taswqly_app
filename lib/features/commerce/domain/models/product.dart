@@ -2,8 +2,8 @@ class Product {
   final String? id;
   final String? title;
   final String? description;
-  final int? price;
-  final int? priceAfterDiscount;
+  final double? price;
+  final double? priceAfterDiscount;
   final String? imageCover;
   final List<String>? images;
   final String? categoryId;
@@ -27,6 +27,5 @@ class Product {
     this.ratingsQuantity,
     this.quantity,
     this.availableColors,
-
   });
 }

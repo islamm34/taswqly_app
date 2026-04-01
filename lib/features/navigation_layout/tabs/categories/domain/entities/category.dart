@@ -12,6 +12,6 @@ class Category {
     this.slug,
     this.image,
     this.createdAt,
-    this.updatedAt,
+    this.updatedAt, String? categoryId,
   });
 }
