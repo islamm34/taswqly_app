@@ -6,8 +6,21 @@ import 'widgets/categories_list.dart';
 import 'widgets/products_list.dart';
 import 'widgets/section_title.dart';
 
-class HomeTabView extends StatelessWidget {
+class HomeTabView extends StatefulWidget {
   const HomeTabView({super.key});
+
+  @override
+  State<HomeTabView> createState() => _HomeTabViewState();
+}
+
+class _HomeTabViewState extends State<HomeTabView> {
+
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +34,7 @@ class HomeTabView extends StatelessWidget {
         const SliverToBoxAdapter(child: SizedBox(height: 16)),
         SectionTitle(title: locale.categories, viewAllVisibility: true),
         const SliverToBoxAdapter(child: SizedBox(height: 16)),
-        const CategoriesList(),
+        const HomeCategoriesList(),
         const SliverToBoxAdapter(child: SizedBox(height: 32)),
         SectionTitle(title: locale.homeAppliance),
         const SliverToBoxAdapter(child: SizedBox(height: 16)),

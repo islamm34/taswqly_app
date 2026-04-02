@@ -54,10 +54,9 @@ class _AdvertisementsListState extends State<AdvertisementsList> {
           itemBuilder: (context, index) {
             return AdvertisementCardWidget(
               index: index,
-              advertisement:
-                  AdvertisementModel.getAdvertisements(
-                    AppLocalizations.of(context)!,
-                  )[index],
+              advertisement: AdvertisementModel.getAdvertisements(
+                AppLocalizations.of(context)!,
+              )[index],
             );
           },
           itemCount: 3,

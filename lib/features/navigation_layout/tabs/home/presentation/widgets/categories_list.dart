@@ -1,30 +1,47 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../../core/utils/dummy_data_provider.dart';
+import '../../../../../../core/utils/resource.dart';
+import '../../../../../commerce/ui/screens/navigation_layout/tabs/home/cubit/home_cubit.dart';
+import '../../../../../commerce/ui/screens/navigation_layout/tabs/home/cubit/home_state.dart';
 import '../../../categories/domain/entities/category.dart';
 import 'category_widget.dart';
 
-class CategoriesList extends StatelessWidget {
-  const CategoriesList({super.key});
+class HomeCategoriesList extends StatelessWidget {
+  const HomeCategoriesList({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List<Category> categories = DummyDataProvider.generateCategories();
     return SliverToBoxAdapter(
       child: SizedBox(
         height: 260,
-        child: GridView.builder(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            mainAxisSpacing: 16,
-            crossAxisSpacing: 16,
-            childAspectRatio: 1.3,
-          ),
-          itemBuilder: (context, index) {
-            return CategoryWidget(category: categories[index]);
+        child: BlocBuilder<HomeCubit, HomeState>(
+          builder: (context, state) {
+            if (state.categoriesApi.status == ApiStatus.success &&
+                state.categoriesApi.data != null) {
+              return GridView.builder(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 16,
+                  crossAxisSpacing: 16,
+                  childAspectRatio: 1.3,
+                ),
+                itemBuilder: (context, index) {
+                  return CategoryWidget(
+                    category: state.categoriesApi.data![index],
+                  );
+                },
+                scrollDirection: Axis.horizontal,
+                itemCount: state.categoriesApi.data!.length,
+              );
+
+            } else if (state.categoriesApi.status == ApiStatus.error) {
+              return Text(state.categoriesApi.errorMessage ?? "");
+            } else {
+              return Center(child: CircularProgressIndicator());
+            }
           },
-          scrollDirection: Axis.horizontal,
-          itemCount: categories.length,
         ),
       ),
     );

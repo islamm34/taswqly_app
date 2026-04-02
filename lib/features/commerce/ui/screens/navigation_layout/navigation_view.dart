@@ -44,40 +44,40 @@ class _NavigationViewState extends State<NavigationView> {
         valueListenable: index,
         builder:
             (context, value, child) => Scaffold(
-              appBar: HomeAppbar(tabIndex: index.value),
-              body: pages[value],
-              bottomNavigationBar: ClipRRect(
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(24),
-                  topRight: Radius.circular(24),
-                ),
-                child: BottomNavigationBar(
-                  backgroundColor: AppColors.blue,
-                  type: BottomNavigationBarType.fixed,
-                  onTap: changeSelectedIndex,
-                  showSelectedLabels: false,
-                  showUnselectedLabels: false,
-                  items: [
-                    HomeBottomNavigationBarItem(
-                      icon: Iconsax.home_outline,
-                      isSelected: value == 0,
-                    ),
-                    HomeBottomNavigationBarItem(
-                      icon: Iconsax.category_outline,
-                      isSelected: value == 1,
-                    ),
-                    HomeBottomNavigationBarItem(
-                      icon: Iconsax.heart_outline,
-                      isSelected: value == 2,
-                    ),
-                    HomeBottomNavigationBarItem(
-                      icon: Iconsax.user_outline,
-                      isSelected: value == 3,
-                    ),
-                  ],
-                ),
-              ),
+          appBar: HomeAppbar(tabIndex: index.value),
+          body: pages[value],
+          bottomNavigationBar: ClipRRect(
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(24),
+              topRight: Radius.circular(24),
             ),
+            child: BottomNavigationBar(
+              backgroundColor: AppColors.blue,
+              type: BottomNavigationBarType.fixed,
+              onTap: changeSelectedIndex,
+              showSelectedLabels: false,
+              showUnselectedLabels: false,
+              items: [
+                HomeBottomNavigationBarItem(
+                  icon: Iconsax.home_outline,
+                  isSelected: value == 0,
+                ),
+                HomeBottomNavigationBarItem(
+                  icon: Iconsax.category_outline,
+                  isSelected: value == 1,
+                ),
+                HomeBottomNavigationBarItem(
+                  icon: Iconsax.heart_outline,
+                  isSelected: value == 2,
+                ),
+                HomeBottomNavigationBarItem(
+                  icon: Iconsax.user_outline,
+                  isSelected: value == 3,
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

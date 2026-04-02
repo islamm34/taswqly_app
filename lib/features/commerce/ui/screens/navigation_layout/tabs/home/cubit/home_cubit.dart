@@ -14,7 +14,7 @@ class HomeCubit extends Cubit<HomeState> {
   final GetProductsUseCase _productsUseCase;
 
   HomeCubit(this._productsUseCase, this._categoriesUseCase)
-    : super(HomeState.initial());
+      : super(HomeState.initial());
 
   loadCategories() async {
     emit(state.copyWith(categoriesApi: Resource.loading()));
