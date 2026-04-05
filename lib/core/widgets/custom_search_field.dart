@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
 import '../l10n/translations/app_localizations.dart';
 import '../utils/app_assets.dart';
+
 
 class CustomSearchField extends StatelessWidget {
   const CustomSearchField({super.key});

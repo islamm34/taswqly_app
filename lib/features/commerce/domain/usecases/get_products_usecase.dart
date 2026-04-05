@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
 
 import '../../../../core/utils/api_result.dart';
-import '../../../products/domain/entity/product.dart';
+import '../models/product.dart';
 import '../repositories/home_repo.dart';
 
 @injectable

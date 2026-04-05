@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../../../core/l10n/translations/app_localizations.dart';
 import '../../../../../../../../core/theme/app_colors.dart';
-import '../../../../../../../navigation_layout/tabs/home/presentation/model/advertisement_model.dart';
-
+import '../../../../../model/advertisement_model.dart';
 
 class AdvertisementCardWidget extends StatelessWidget {
   final int index;

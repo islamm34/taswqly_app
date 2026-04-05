@@ -4,6 +4,7 @@ import 'package:taswqly/core/routing/routes.dart';
 
 import '../../features/auth/ui/screens/login/login.dart';
 import '../../features/commerce/ui/screens/navigation_layout/navigation_view.dart';
+
 abstract class AppRouter {
   static Route generateRoute(RouteSettings settings) {
     if (kDebugMode) {

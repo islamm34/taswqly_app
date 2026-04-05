@@ -9,6 +9,7 @@ import '../../../../network/models/request/register_request.dart';
 import '../../../domain/repositories/auth_repo.dart';
 import 'data_sources/auth_remote_data_source.dart';
 
+
 @Injectable(as: AuthRepo)
 class AuthRepoImpl extends AuthRepo {
   AuthRemoteDataSource authRemoteDataSource;

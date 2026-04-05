@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import '../../../../../../../../core/l10n/translations/app_localizations.dart';
-import '../../../../../../../navigation_layout/tabs/home/presentation/model/advertisement_model.dart';
+import '../../../../../model/advertisement_model.dart';
 import 'advertisement_card_widget.dart';
 
 class AdvertisementsList extends StatefulWidget {
@@ -53,9 +53,10 @@ class _AdvertisementsListState extends State<AdvertisementsList> {
           itemBuilder: (context, index) {
             return AdvertisementCardWidget(
               index: index,
-              advertisement: AdvertisementModel.getAdvertisements(
-                AppLocalizations.of(context)!,
-              )[index],
+              advertisement:
+                  AdvertisementModel.getAdvertisements(
+                    AppLocalizations.of(context)!,
+                  )[index],
             );
           },
           itemCount: 3,

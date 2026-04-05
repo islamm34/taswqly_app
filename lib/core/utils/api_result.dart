@@ -1,4 +1,5 @@
 
+
 import 'app_errors.dart';
 
 sealed class ApiResult<T> {

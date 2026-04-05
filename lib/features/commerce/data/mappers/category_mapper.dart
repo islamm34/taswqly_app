@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
 
-import '../../../navigation_layout/tabs/categories/domain/entities/category.dart';
 import '../../../network/models/response/category/remote_category.dart';
+import '../../domain/models/category.dart';
 
 @injectable
 class CategoryMapper {

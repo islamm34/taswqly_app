@@ -5,10 +5,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../../../core/di/di.dart';
 import '../../../../../../../core/theme/app_colors.dart';
 import '../../../../../../../core/utils/app_assets.dart';
-import '../../../../../../navigation_layout/tabs/categories/domain/entities/category.dart';
+import '../../../../../domain/models/category.dart';
 import 'cubit/categories_cubit.dart';
 import 'cubit/categories_state.dart';
-
 
 class CategoriesTabView extends StatefulWidget {
   const CategoriesTabView({super.key});

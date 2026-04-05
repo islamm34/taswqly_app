@@ -6,15 +6,13 @@ import '../../../../../../domain/usecases/get_categories_usecase.dart';
 import '../../../../../../domain/usecases/get_products_usecase.dart';
 import 'home_state.dart';
 
-
-
 @injectable
 class HomeCubit extends Cubit<HomeState> {
   final GetCategoriesUseCase _categoriesUseCase;
   final GetProductsUseCase _productsUseCase;
 
   HomeCubit(this._productsUseCase, this._categoriesUseCase)
-      : super(HomeState.initial());
+    : super(HomeState.initial());
 
   loadCategories() async {
     emit(state.copyWith(categoriesApi: Resource.loading()));

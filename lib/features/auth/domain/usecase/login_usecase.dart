@@ -1,8 +1,9 @@
-import 'package:injectable/injectable.dart';
+ import 'package:injectable/injectable.dart';
 
 import '../../../../core/utils/api_result.dart';
 import '../../../network/models/request/login_request.dart';
 import '../repositories/auth_repo.dart';
+
 
 @injectable
 class LoginUsecase {

@@ -13,7 +13,6 @@ class ProductsList extends StatelessWidget {
     return SliverToBoxAdapter(
       child: SizedBox(
         height: 240,
-
         child: BlocBuilder<HomeCubit, HomeState>(
           builder: (context, state) {
             if (state.productsApi.isSuccess && state.productsApi.data != null) {

@@ -1,8 +1,9 @@
 import 'package:injectable/injectable.dart';
 
 import '../../../../core/utils/api_result.dart';
-import '../../../navigation_layout/tabs/categories/domain/entities/category.dart';
+import '../models/category.dart';
 import '../repositories/home_repo.dart';
+
 @injectable
 class GetCategoriesUseCase {
   final HomeRepo _homeRepo;

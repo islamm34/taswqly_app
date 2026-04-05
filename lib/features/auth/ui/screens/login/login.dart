@@ -37,7 +37,7 @@ class Login extends StatelessWidget {
     return BlocListener<LoginCubit, LoginState>(
       bloc: cubit,
       listener: (context, state) {
-        if (state.loginApi.status == ApiStatus.success) {
+        if (state?.loginApi.status == ApiStatus.success) {
           Navigator.pushNamed(context, Routes.navigationRoute);
         } else if (state.loginApi.status == ApiStatus.error) {
           Fluttertoast.showToast(

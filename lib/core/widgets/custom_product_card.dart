@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../features/products/domain/entity/product.dart';
+import '../../features/commerce/domain/models/product.dart';
 import '../utils/app_assets.dart';
 
 class CustomProductCard extends StatelessWidget {
@@ -32,7 +32,8 @@ class CustomProductCard extends StatelessWidget {
                     topRight: Radius.circular(16),
                   ),
                   child: CachedNetworkImage(
-                    imageUrl: product.imageCover ??
+                    imageUrl:
+                        product.imageCover ??
                         'https://ecommerce.routemisr.com/Route-Academy-products/1678303324588-cover.jpeg',
                     fit: BoxFit.cover,
                     width: double.infinity,
@@ -47,34 +48,34 @@ class CustomProductCard extends StatelessWidget {
                     children: [
                       Text(
                         product.title ?? 'Unknown Product',
-                        style: textTheme.bodyMedium
-                            ?.copyWith(fontWeight: FontWeight.bold),
+                        style: textTheme.headlineSmall,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
+
                       Text(
                         product.description ?? 'No description available',
-                        style: textTheme.bodySmall,
-                        maxLines: 1,
+                        style: textTheme.headlineSmall,
                         overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
                       ),
-                      const Spacer(),
+                      const SizedBox(height: 8),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'EGP ${product.priceAfterDiscount ?? product.price ?? 0}',
-                            style: textTheme.bodyMedium,
+                            'EGP ${product.priceAfterDiscount ?? 0} ',
+                            style: textTheme.headlineSmall,
                           ),
-                          if (product.priceAfterDiscount != null)
-                            Text(
-                              "${product.price ?? 0}",
-                              style: textTheme.bodySmall?.copyWith(
-                                color: colorScheme.primary
-                                    .withValues(alpha: .6),
-                                decoration: TextDecoration.lineThrough,
-                              ),
+                          Text(
+                            " ${product.price ?? 0}",
+                            style: Theme.of(
+                              context,
+                            ).textTheme.headlineSmall?.copyWith(
+                              color: colorScheme.primary.withValues(alpha: .6),
+                              decoration: TextDecoration.lineThrough,
                             ),
+                          ),
                         ],
                       ),
                       Row(
@@ -83,13 +84,11 @@ class CustomProductCard extends StatelessWidget {
                           Row(
                             spacing: 4,
                             children: [
-                              SvgPicture.asset(AppSvgs.ratingIcon),
                               Text(
-                                product.ratingsAverage
-                                    ?.toStringAsFixed(1) ??
-                                    '0.0',
-                                style: textTheme.bodySmall,
+                                'Review (${product.ratingsAverage?.toStringAsFixed(1) ?? 0})',
+                                style: textTheme.headlineSmall,
                               ),
+                              SvgPicture.asset(AppSvgs.ratingIcon),
                             ],
                           ),
                           IconButton(
@@ -117,7 +116,7 @@ class CustomProductCard extends StatelessWidget {
             right: 8,
             child: InkWell(
               onTap: () {
-                // TODO: Implement favorite toggle functionality
+                //TODO: Implement favorite toggle functionality
               },
               child: CircleAvatar(
                 backgroundColor: colorScheme.onPrimary,
