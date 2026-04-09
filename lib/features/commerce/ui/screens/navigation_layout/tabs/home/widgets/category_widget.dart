@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../../../core/utils/app_assets.dart';
-import '../../../../../../../navigation_layout/tabs/categories/domain/entities/category.dart';
+import '../../../../../../domain/models/category.dart';
 
 class CategoryWidget extends StatelessWidget {
   final Category category;

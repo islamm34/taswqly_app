@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:taswqly/features/commerce/ui/screens/navigation_layout/tabs/home/widgets/section_title.dart';
 
 import '../../../../../../../core/l10n/translations/app_localizations.dart';
-import '../../../../../../navigation_layout/tabs/home/presentation/widgets/section_title.dart';
 import 'widgets/advertisements_list.dart';
 import 'widgets/categories_list.dart';
 import 'widgets/products_list.dart';

@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'package:taswqly/features/commerce/ui/screens/navigation_layout/tabs/categories/categories_tab_view.dart';
+import 'package:taswqly/features/commerce/ui/screens/navigation_layout/tabs/favorites/favorite_tab_view.dart';
 import 'package:taswqly/features/commerce/ui/screens/navigation_layout/tabs/home/cubit/home_cubit.dart';
+import 'package:taswqly/features/commerce/ui/screens/navigation_layout/tabs/home/home_tab_view.dart';
+import 'package:taswqly/features/commerce/ui/screens/navigation_layout/tabs/profile/profile_tab_view.dart';
 
 import '../../../../../core/di/di.dart';
 import '../../../../../core/theme/app_colors.dart';
-import '../../../../navigation_layout/tabs/categories/presentation/categories_tab_view.dart';
-import '../../../../navigation_layout/tabs/favorite/favorite_tab_view.dart';
-import '../../../../navigation_layout/tabs/home/presentation/home_tab_view.dart';
-import '../../../../navigation_layout/tabs/profile/profile_tab_view.dart';
-import '../../../../navigation_layout/widgets/home_appbar.dart';
-import '../../../../navigation_layout/widgets/home_bottom_navigation_bar_item.dart';
+import '../../widgets/home_appbar.dart';
+import '../../widgets/home_bottom_navigation_bar_item.dart';
+
 class NavigationView extends StatefulWidget {
   const NavigationView({super.key});
 

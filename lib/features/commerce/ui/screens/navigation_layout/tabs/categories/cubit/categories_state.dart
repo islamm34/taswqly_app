@@ -1,7 +1,6 @@
 
-
 import '../../../../../../../../core/utils/resource.dart';
-import '../../../../../../../navigation_layout/tabs/categories/domain/entities/category.dart';
+import '../../../../../../domain/models/category.dart';
 
 class CategoriesState {
   late int selectedCategoryIndex = 0;

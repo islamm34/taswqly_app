@@ -1,4 +1,6 @@
 import 'package:injectable/injectable.dart';
+
+
 import '../../../../../../core/utils/api_result.dart';
 import '../../../../../../core/utils/app_errors.dart';
 import '../../../../../../core/utils/shared_prefs_utils.dart';
@@ -10,12 +12,11 @@ import 'auth_remote_data_source.dart';
 
 @Injectable(as: AuthRemoteDataSource)
 class AuthRemoteDataSourceImpl extends AuthRemoteDataSource {
-  final ApiClient _apiClient;
-  final SharedPrefsUtils _sharedPrefsUtils;
+  ApiClient _apiClient;
+  SharedPrefsUtils _sharedPrefsUtils;
 
   AuthRemoteDataSourceImpl(this._apiClient, this._sharedPrefsUtils);
 
-  @override
   Future<ApiResult<AuthResponse>> login(LoginRequest request) async {
     try {
       var response = await _apiClient.login(request);
@@ -30,8 +31,6 @@ class AuthRemoteDataSourceImpl extends AuthRemoteDataSource {
     }
   }
 
-
-  @override
   Future<ApiResult<AuthResponse>> register(RegisterRequest request) async {
     try {
       var response = await _apiClient.register(request);

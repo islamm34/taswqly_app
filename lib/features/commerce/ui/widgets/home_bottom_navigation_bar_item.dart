@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 import '../../../../core/theme/app_colors.dart';
+
 class HomeBottomNavigationBarItem extends BottomNavigationBarItem {
   HomeBottomNavigationBarItem({
     required IconData icon,

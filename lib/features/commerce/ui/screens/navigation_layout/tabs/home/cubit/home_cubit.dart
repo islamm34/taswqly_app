@@ -6,8 +6,6 @@ import '../../../../../../domain/usecases/get_categories_usecase.dart';
 import '../../../../../../domain/usecases/get_products_usecase.dart';
 import 'home_state.dart';
 
-
-
 @injectable
 class HomeCubit extends Cubit<HomeState> {
   final GetCategoriesUseCase _categoriesUseCase;

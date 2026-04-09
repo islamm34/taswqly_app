@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:retrofit/retrofit.dart';
+
 import '../models/request/login_request.dart';
 import '../models/request/register_request.dart';
 import '../models/response/auth_response.dart';

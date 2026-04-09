@@ -1,11 +1,11 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:injectable/injectable.dart';
+import 'package:taswqly/core/utils/api_result.dart' show ApiResult, SuccessApiResult, ErrorApiResult;
 
-import '../../../../../core/utils/api_result.dart';
 import '../../../../../core/utils/app_errors.dart';
 import '../../../../../core/utils/extensions/connectivity_extension.dart';
-import '../../../../navigation_layout/tabs/categories/domain/entities/category.dart';
-import '../../../../products/domain/entity/product.dart';
+import '../../../domain/models/category.dart';
+import '../../../domain/models/product.dart';
 import '../../../domain/repositories/home_repo.dart';
 import '../../mappers/category_mapper.dart';
 import '../../mappers/product_mapper.dart';

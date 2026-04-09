@@ -1,9 +1,7 @@
 
-
-
 import '../../../../../../../../core/utils/resource.dart';
-import '../../../../../../../navigation_layout/tabs/categories/domain/entities/category.dart';
-import '../../../../../../../products/domain/entity/product.dart';
+import '../../../../../../domain/models/category.dart';
+import '../../../../../../domain/models/product.dart';
 
 class HomeState {
   late Resource<List<Category>> categoriesApi = Resource.initial();
